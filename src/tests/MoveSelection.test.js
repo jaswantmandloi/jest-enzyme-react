@@ -22,7 +22,7 @@ describe("Move selection testing", () => {
   });
 
   it("select fist item", async () => {
-    await act(async () => {
+    act(async () => {
       fireKeyDown();
       await Promise.resolve(true);
       wrapped.update();
