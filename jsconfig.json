@@ -3,7 +3,7 @@
     "baseUrl": "src",
     "paths": {
       "~/*": ["./*"],
-      "features/*": ["features/*"],
+      "modules/*": ["modules/*"],
       "shared/*": ["shared/*"]
     }
   },
