@@ -1,0 +1,61 @@
+{
+    "env": {
+        "browser": true,
+        "node": true,
+        "es6": true,
+        "commonjs": true
+    },
+    "extends": [
+        "eslint:recommended",
+         "plugin:react/recommended",
+        // "plugin:import/errors",
+        // "plugin:import/warnings"
+    ],
+    "parser": "babel-eslint",
+    "parserOptions": {
+        "ecmaVersion": 9,
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "prettier",
+        "react-hooks",
+        "no-unsanitized",
+        "eslint-plugin-react"
+    ],
+    "rules": {
+        "no-unneeded-ternary": "error",
+        "react/display-name": 0,
+        "react/react-in-jsx-scope": 0,
+        //"react/prop-types": "warn",
+        "react/jsx-uses-vars": [
+            2
+        ],
+        "no-console": 2,
+        "prettier/prettier": "error",
+        "no-var": "error",
+        "prefer-const": "warn",
+        "no-useless-constructor": "error",
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": "warn",
+        "eqeqeq": "error",
+        "curly": "warn",
+        
+        "react/prop-types": 0,
+
+        // https://github.com/mozilla/eslint-plugin-no-unsanitized
+        "no-unsanitized/method": "error",
+        "no-unsanitized/property": "error"
+    },
+    "settings": {
+        "react": {
+            "version": "detect"
+        },
+        "import/resolver": {
+            "babel-module": {}
+        }
+    }
+}
