@@ -6,6 +6,7 @@
     "eamodio.gitlens",
     "wix.glean",
     "sleistner.vscode-fileutils",
-    "coenraads.bracket-pair-colorizer"
+    "coenraads.bracket-pair-colorizer",
+    "firsttris.vscode-jest-runner"
   ]
 }

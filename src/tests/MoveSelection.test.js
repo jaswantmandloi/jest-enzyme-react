@@ -22,18 +22,26 @@ describe("Move selection testing", () => {
   });
 
   it("select fist item", async () => {
-    act(async () => {
-      fireKeyDown();
-      await Promise.resolve(true);
-      wrapped.update();
-      //console.log("html", wrapped.debug());
+    //act(async () => {
+    fireKeyDown({ key: "ArrowDown" });
+    fireKeyUp();
+    await Promise.resolve(true);
+    wrapped.update();
+    //console.log("html", wrapped.debug());
 
-      const firstElement = wrapped.find("ul").find("li").at(0);
-      expect(firstElement.hasClass("selected")).toEqual(true);
-    });
+    const firstElement = wrapped.find("ul").find("li").at(0);
+    expect(firstElement.hasClass("selected")).toEqual(true);
+    //});
   });
 });
 
-function fireKeyDown() {
-  map.keydown({ key: "ArrowDown" });
+function fireKeyDown({ key }) {
+  act(() => {
+    map.keydown({ key });
+  });
+}
+function fireKeyUp() {
+  act(() => {
+    map.keyup({ key: "" });
+  });
 }
